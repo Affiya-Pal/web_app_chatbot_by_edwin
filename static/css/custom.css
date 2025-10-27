@@ -1,0 +1,54 @@
+:root {
+    --bs-primary: #28a745; /* A nice health green */
+    --bs-secondary: #6c757d;
+    --bs-success: #20c997;
+    --bs-danger: #dc3545;
+    --bs-warning: #ffc107;
+    --bs-info: #17a2b8;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+}
+
+a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader .loader {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}

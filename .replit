@@ -1,0 +1,10 @@
+
+{
+  "language": "python3",
+  "nix": {
+    "channel": "stable-23.11",
+    "pkgs": [
+      "pkgs.apt"
+    ]
+  }
+}
