@@ -11,3 +11,7 @@ def home(request):
         "user": request.user,
     }
     return render(request, "frontend/index.html", context)
+
+def chatbot(request):
+    """Renders the chatbot page."""
+    return render(request, "frontend/chatbot.html")

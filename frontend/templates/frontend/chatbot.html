@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBot - Afiya Pal</title>
+
+    <!-- Google Font (Nunito) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #121212; /* Match the base theme */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <a href="{% url 'frontend:index' %}" class="back-link">&larr;</a>
+            <h2>Your Health Assistant</h2>
+            <div class="header-placeholder"></div> <!-- To balance the flexbox -->
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Initial bot message can be here -->
+            <div class="message bot-message">
+                <span>Hello! I am your personal Health Assistant. How can I help you today?</span>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>
