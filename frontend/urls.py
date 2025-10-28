@@ -11,6 +11,7 @@ app_name = "frontend"
 urlpatterns = [
     path("", views.home, name="index"),
     path("chatbot/", views.chatbot, name="chatbot"),
+    path("chatbot-api/", views.chatbot_api, name="chatbot_api"), # New API endpoint
 
     # Password Reset Functionality
     path("password-reset-done/", CustomPasswordResetDoneView.as_view(), name="password_reset_done"),
